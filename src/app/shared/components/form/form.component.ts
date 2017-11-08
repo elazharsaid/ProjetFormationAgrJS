@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Route, Router } from '@angular/router';
 
 import { State } from '../../../items/enums/state.enums';
@@ -11,13 +11,14 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormComponent implements OnInit {
 
   /**creation d'objet */
   state= State;
-  collection = COLLECTION;
+  // collection = COLLECTION;
   /**newItem: Item; */
   form: FormGroup;
   nameCtrl: FormControl;
@@ -64,8 +65,8 @@ export class FormComponent implements OnInit {
     /** */
     this.newItem.emit({
       name: this.nameCtrl.value,
-      ref: this.nameCtrl.value,
-      state: this.nameCtrl.value
+      ref: this.refCtrl.value,
+      state: this.stateCtrl.value
     });
 
     this.form.reset();

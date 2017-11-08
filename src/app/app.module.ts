@@ -5,7 +5,7 @@ import { RouterModule, Router } from '@angular/router';
 /**module apres composant  */
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { ItemsModule } from './items/items.module';
+// import { ItemsModule } from './items/items.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -17,11 +17,10 @@ import { environment } from '../environments/environment.prod';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ItemsModule,
+    // ItemsModule,
     CoreModule,
     SharedModule,
     RouterModule
-
   ],
   declarations: [
     AppComponent

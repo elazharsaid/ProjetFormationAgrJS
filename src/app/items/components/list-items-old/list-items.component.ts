@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Item } from '../../interfaces/item.model';
 import { COLLECTION } from '../../collection';

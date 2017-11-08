@@ -5,12 +5,19 @@ import { PageNotFoundComponentComponent } from './components/page-not-found-comp
 import { HomeComponentComponent } from './components/home-component/home-component.component';
 import { CollectionService } from './services/collection/collection.service';
 import { CoreRootingModule } from './core-rooting.module';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../../environments/environment.prod';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    CoreRootingModule
+    CoreRootingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
 
   declarations: [

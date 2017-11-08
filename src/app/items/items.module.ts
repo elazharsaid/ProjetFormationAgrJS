@@ -6,12 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 import { ItemComponent } from './components/item/item.component';
 import { ListItemsComponent } from './containers/list-items/list-items.component';
 import { AddComponent } from './containers/add/add.component';
+import { ItemRoutingModule } from './item-routing.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ItemRoutingModule
   ],
 
   declarations: [

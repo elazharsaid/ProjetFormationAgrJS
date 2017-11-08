@@ -34,7 +34,7 @@ export class StateDirective implements OnChanges {
       break;
 
       default:
-      console.log('bim');
+      console.log('StateDirective');
       break;
     }
 

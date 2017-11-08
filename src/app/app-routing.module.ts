@@ -10,15 +10,17 @@ import { AddComponent } from './items/containers/add/add.component';
 
 const appRoutes: Routes = [
 
-  { path: 'home', component: HomeComponentComponent },
-  { path: 'list',      component: ListItemsComponent },
-  { path: 'add',      component: AddComponent },
+  // { path: 'home', component: HomeComponentComponent },
+  // { path: 'list',      component: ListItemsComponent },
+  // { path: 'add',      component: AddComponent },
+  { path: 'items', loadChildren: './items/items.module#ItemsModule' },
 
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: '**', component: PageNotFoundComponentComponent }
+
+  // { path: '**', component: PageNotFoundComponentComponent }
 ];
 
 

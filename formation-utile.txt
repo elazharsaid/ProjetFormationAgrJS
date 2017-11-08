@@ -61,5 +61,27 @@ implemetation des du service et appele du service par injection dans la construc
 gestion de redirection 
 l'utilisation du module de routing
 
+https://ng-bootstrap.github.io/#/home
+yarn add @ng-bootstrap/ng-bootstrap
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+creation d'un projet fierBase
+yarn add global firebase-tools
+NgbModule.forRoot()
+
+pattern observateur:
+
+froid:  emission -> kill
+
+chaud: emissionn -> listing
+
+
+compdoc
+ yarn add global -g @compodoc/compodoc
+yarn  @compodoc/compodoc
+yarn compodoc -> genration de la docs
+
+
 
 
