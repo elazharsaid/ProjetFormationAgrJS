@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <span [appState]="item.state"></span>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{item.name}}</h4>
+    <p class="card-text">{{item.state}}</p>
+
+    <a href="#" class="btn btn-primary state-{{item.state}}"  >Go somewhere</a>
+
+    <button class="btn btn-primary" *ngIf="state.ALIVRER === item.state" (click)="changeState(item, state.ENCOURS)" >En cours</button>
+    <button class="btn btn-primary" *ngIf="state.ENCOURS === item.state" (click)="changeState(item, state.ALIVRER)" >Livrée</button>
+
+
+  </div>
+</div>

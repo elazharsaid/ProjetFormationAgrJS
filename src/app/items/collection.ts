@@ -17,4 +17,4 @@ export const COLLECTION: Item[] = [
     ref : '1236',
     state: 2
   }
-]
+];

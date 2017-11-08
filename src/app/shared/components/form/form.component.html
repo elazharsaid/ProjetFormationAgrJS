@@ -1,0 +1,41 @@
+<div class="container">
+
+<!-- {{newItem | json}} -->
+
+<!-- attribution d'un non au form ex:#form=nameForm-->
+<!-- une manier pour faire un binding entre le form et TS (formgroupe) -->
+<form novalidate  (ngSubmit)="process()" [formGroup]="form">
+
+  <div class="form-group">
+    <!-- <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1"> -->
+
+     <!-- #name='ngModel' variable sur la quelle en fait le test-->
+     <!-- une manier pour le binding formControlName -->
+
+    <input formControlName="name" name="name" class="form-control" type="text" placeholder="Nom et pre" />
+    <div class="alert alert-danger" *ngIf="" > invalide </div>
+    <!-- controle de validation des champs utilisaion d'alert-->
+  </div>
+
+  <div class="form-group">
+    <input  formControlName="ref" name="reff" class="form-control" type="text" placeholder="Ref:123" />
+    <div class="alert alert-danger" *ngIf=""> invalide </div>
+  </div>
+
+  <div class="form-group">
+    <select  name="state" class="form-control form-control-lg">
+      <option [ngValue]="state.ALIVRER">A livrer</option>
+      <option [ngValue]="state.ENCOURS">En cours</option>
+      <option [ngValue]="state.LIVRER">Livrer</option>
+    </select>
+  </div>
+
+  <!-- creation de derctive [disable] pour activer ou desactiver le submit(bouton)  -->
+  <div class="form-group">
+    <button [disabled]="" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+
+</form>
+
+</div>

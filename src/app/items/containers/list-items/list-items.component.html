@@ -1,0 +1,23 @@
+<!-- old <div class="container">
+<ng-container  *ngFor="let item of collection">
+  <div class="card">
+    <div class="card-header">
+      <span class="state-0" *ngIf="state.ALIVRER == item.state"> yop {{item.ref}} </span>
+      <span class="state-1" *ngIf="state.ENCOURS == item.state"> hop {{item.ref}} </span>
+      <span class="state-2" *ngIf="state.LIVRER == item.state"> top {{item.ref}} </span>
+      <span [appState]="item.state"></span>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{item.name}}</h4>
+      <p class="card-text">{{item.state}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</ng-container>
+</div> -->
+
+<div class="container">
+  <ng-container  *ngFor="let item of collection">
+    <app-item [item]="item"></app-item>
+  </ng-container>
+</div>

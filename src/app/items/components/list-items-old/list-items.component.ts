@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Item } from '../../interfaces/item.model';
 import { COLLECTION } from '../../collection';
+import { State } from '../../enums/state.enums';
 
 @Component({
   selector: 'app-list-items',
@@ -11,6 +12,7 @@ import { COLLECTION } from '../../collection';
 export class ListItemsComponent implements OnInit {
 
   collection: Item[] = COLLECTION;
+  state  = State;
 
   constructor() { }
 

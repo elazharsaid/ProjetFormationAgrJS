@@ -1,0 +1,53 @@
+gerland07
+
+essentials angular
+angulardoc
+
+npm install -g yarn
+
+-- commite sur git
+git add.
+git commit
+git push 
+
+
+ReactiveX -> (observateur des pattern)
+
+
+ref: https://angular.io/guide/quickstart (creat a new env)
+
+install angular sur la pc et cli une lib pour executer des commandes
+npm install -g @angular/cli
+ng new my-app --style=scss
+
+bascule sur la gestion d packaging ave yaran
+ng set --global packageManager=yarn
+
+pour demarre le servuer de test
+ng serve 
+
+
+yarn add bootstrap@4.0.0-beta
+yarn add jquery
+yarn add popper.js
+
+-------------------------------------------------------------
+
+import de l'html dans l'html (custom elem, shadow DOM, html temp )
+
+creation d'une app modulaire (shared, app module, core)
+
+la compilation du typescript ce fait par babeljs
+
+
+structure de module: exemple creation d'un menu 
+ 
+ng g module shared
+ng g module core
+ng g component shared/components/menu
+
+creation interface:
+ng g interface core/interfaces/item
+
+
+

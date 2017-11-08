@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { PageNotFoundComponentComponent } from './components/page-not-found-component/page-not-found-component.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { CollectionService } from './services/collection/collection.service';
+import { CoreRootingModule } from './core-rooting.module';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CoreRootingModule
   ],
 
   declarations: [
@@ -18,5 +21,21 @@ import { HomeComponentComponent } from './components/home-component/home-compone
       HomeComponentComponent,
       PageNotFoundComponentComponent,
     ],
+
+  providers: [
+      CollectionService
+    ]
 })
-export class CoreModule { }
+export class CoreModule {
+
+/**
+   * @constructor make sure CoreModule is imported only by one NgModule the AppModule
+   * @param parentModule
+   */
+  /**constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    if (parentModule) {
+      throw new Error('CoreModule is already loaded. Import only in AppModule');
+    }
+}*/
+
+}
