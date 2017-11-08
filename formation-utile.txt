@@ -49,5 +49,17 @@ ng g component shared/components/menu
 creation interface:
 ng g interface core/interfaces/item
 
+creation de derective dans shared et l'attacher a item
+ng derective 
+
+
+les services: 
+ng g service
+implemetation des du service et appele du service par injection dans la constructeur 
+
+
+gestion de redirection 
+l'utilisation du module de routing
+
 
 
